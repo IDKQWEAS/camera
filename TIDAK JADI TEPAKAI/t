@@ -1,0 +1,288 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    $_SESSION['redirect_to'] = basename($_SERVER['PHP_SELF']);
+    header("Location: signin.php");
+    exit();
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMERRA</title>
+    <script src="https://kit.fontawesome.com/488d622bc0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+         /* .search-container {
+            position: relative;
+            width: 400px;
+            margin: 50px auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-results {
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            max-height: 300px;
+            overflow-y: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .search-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+
+        .search-item:last-child {
+            border-bottom: none;
+        }
+
+        .search-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .search-item .name {
+            font-weight: bold;
+        }
+
+        .search-item .price {
+            color: #888;
+            font-size: 14px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="hero">
+            <div class="inner-wrapper">
+                <div class="header-nav search">
+                    <img class="logo" src="./img/logo.png">
+                    <div class="search">
+                        <input class="text" type="text" placeholder="Search for product?" id="searchInput">
+                        <a href="#" class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #6D2323;"></i>
+                        </a>
+                    </div>
+
+                    <!-- box visible -->
+                     <!-- <div class="search-results" id="resultsBox" style="display: none;"></div> -->
+
+                    <!-- box visible -->
+
+
+                    <div class="login">
+                        <div class="login-item">
+                            <a href="logout.php"><i class="fa-solid fa-arrow-right-to-bracket" style="color: #FEF9E1;"></i></a>
+                            <a href="profile.php">profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="nav-item">
+                        <a href="#kategori">Kategori</a>
+                        <a href="#product">Product</a>
+                        <a href="#brand">Brand</a>
+                        <a href="#order">Order</a>
+                        <a href="#review">Review</a>
+                        <a href="./chart/cart.php"><i class="fa-solid fa-cart-shopping" style="color: #FEF9E1;"></i></a>
+                    </div>
+                </div>
+                <h1 class="header-text">Temukan Kamera Impianmu, Abadikan Setiap Momen</h1>
+                <p class="header-desc">Dari DSLR profesional hingga kamera mirrorless yang ringkas, kami menyediakan koleksi terbaik untuk setiap kebutuhan fotografi. Mulai petualangan visualmu hari ini!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="kategori" class="kategori">
+        <h1 class="kategori-text">Kategori</h1>
+        <div class="kategori-container1">
+            <div class="kategori-frame">
+                <img src="./img/ffkategori.png" alt="">
+                <p class="kategori-desc">Compact Kamera</p>
+            </div>
+            <div class="kategori-frame">
+                <img src="./img/ffkategori.png" alt="">
+                <p class="kategori-desc">Compact Kamera</p>
+            </div>
+            <div class="kategori-frame">
+                <img src="./img/ffkategori.png" alt="">
+                <p class="kategori-desc">Compact Kamera</p>
+            </div>
+        </div>
+
+        <div class="kategori-container2">
+            <div class="kategori-frame">
+                <img src="./img/dslrkategori.png" alt="">
+                <p class="kategori-desc">DSLR</p>
+            </div>
+            <div class="kategori-frame">
+                <img src="./img/dslrkategori.png" alt="">
+                <p class="kategori-desc">DSLR</p>
+            </div>
+            <div class="kategori-frame">
+                <img src="./img/dslrkategori.png" alt="">
+                <p class="kategori-desc">DSLR</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="product" class="product">
+        <h1 class="product-text">Product</h1>
+        <div class="product-container1">
+            <div class="product-frame">
+                <img src="./img/canonproduct.png" alt="">
+                <p class="product-desc">Canon</p>
+            </div>
+            <div class="product-frame">
+                <img src="./img/canonproduct.png" alt="">
+                <p class="product-desc">Canon</p>
+            </div>
+            <div class="product-frame">
+                <img src="./img/canonproduct.png" alt="">
+                <p class="product-desc">Canon</p>
+            </div>
+        </div>
+        <div class="product-container2">
+            <div class="product-frame">
+                <img src="./img/ffproduct.png" alt="">
+                <p class="product-desc">Fujifim</p>
+            </div>
+            <div class="product-frame">
+                <img src="./img/ffproduct.png" alt="">
+                <p class="product-desc">Fujifilm</p>
+            </div>
+            <div class="product-frame">
+                <img src="./img/ffproduct.png" alt="">
+                <p class="product-desc">Fujifilm</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="brand" class="brand">
+        <h1 class="brand-text">Brand</h1>
+        <div class="brand-container">
+            <div class="brand-frame">
+                <img src="./img/canonbrand.png" alt="">
+                <p class="brand-desc">Canon</p>
+            </div>
+            <div class="brand-frame">
+                <img src="./img/ffbrand.png" alt="">
+                <p class="brand-desc">Fujifilm</p>
+            </div>
+            <div class="brand-frame">
+                <img src="./img/canonbrand.png" alt="">
+                <p class="brand-desc">Canon</p>
+            </div>
+            <div class="brand-frame">
+                <img src="./img/ffbrand.png" alt="">
+                <p class="brand-desc">Fujifilm</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="order" class="order">
+        <h1 class="order-text">Order</h1>
+        <div class="order-container1">
+            <img class="order-img" src="./img/bgorder.png" alt="">
+            <p class="order-title">GET YOUR<br>KAMERA</p>
+        </div>
+        <div class="order-container2">
+            <div class="order-frame">
+                <img src="./img/fforder.png" alt="">
+                <p class="order-desc">FUJIFILM FINEPIX A800</p>
+                <p class="order-price">Rp 250.000</p>
+                <a href="./chart/add_to_cart.php?id=1" class="order-icon"><i class="fa-solid fa-plus"></i></a>
+            </div>
+            <div class="order-frame">
+                <img src="./img/fforder.png" alt="">
+                <p class="order-desc">FUJIFILM GFX100 II</p>
+                <p class="order-price">Rp 500.000</p>
+                <a href="./chart/add_to_cart.php?id=2" class="order-icon"><i class="fa-solid fa-plus"></i></a>
+            </div>
+            <div class="order-frame">
+                <img src="./img/fforder.png" alt="">
+                <p class="order-desc">FUJIFILM GFX100 II</p>
+                <p class="order-price">Rp 1500.000</p>
+                <a href="./chart/add_to_cart.php?id=3" class="order-icon"><i class="fa-solid fa-plus"></i></a>
+            </div>
+            <div class="order-frame">
+                <img src="./img/fforder.png" alt="">
+                <p class="order-desc">FUJIFILM GFX50S II</p>
+                <p class="order-price">Rp 2.500.000</p>
+                <a href="./chart/add_to_cart.php?id=4" class="order-icon"><i class="fa-solid fa-plus"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="review" class="review">
+        <h1 class="review-text">Review</h1>
+        <div class="review-container">
+            <div class="review-frame">
+                <img src="./img/canonreview.png" alt="">
+                <p class="review-nama">Alex</p>
+                <p class="review-desc">Canon memberikan hasil foto yang natural, cocok untuk penggunaan sehari-hari maupun traveling.</p>
+            </div>
+            <div class="review-frame">
+                <img src="./img/canonreview.png" alt="">
+                <p class="review-nama">Alex</p>
+                <p class="review-desc">Canon memberikan hasil foto yang natural, cocok untuk penggunaan sehari-hari maupun traveling.</p>
+            </div>
+            <div class="review-frame">
+                <img src="./img/canonreview.png" alt="">
+                <p class="review-nama">Alex</p>
+                <p class="review-desc">Canon memberikan hasil foto yang natural, cocok untuk penggunaan sehari-hari maupun traveling.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section1">
+                <img class="footer-logo" src="./img/logo.png" alt="">
+                <p class="footer-desc">Kamera klasik berkualitas <br>untuk kenangan tak terlupakan.</p>
+            </div>
+            <div class="footer-section2">
+                <h1 class="footer-title">Navigasi</h1>
+                <ul class="title-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Produk</a></li>
+                    <li><a href="#">Brand</a></li>
+                    <li><a href="#">Review</a></li>
+                </ul>
+            </div>
+            <div class="footer-section3">
+                <h1 class="footer-title">Kontak</h1>
+                <p class="footer-info">📍 Jl. Kaliurang Km.5, Sinduadi, Sleman, Yogyakarta</p>
+                <p class="footer-info">✉ info@camerrastore.com</p>
+                <p class="footer-info">☎ 0812-3456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Camerra Store. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

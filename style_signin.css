@@ -1,0 +1,84 @@
+.akun {
+  background-color: #6d2323;
+  width: 500px;
+  /* height: 486px; */
+  min-height: 486px;
+  border-radius: 15px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: visible;
+}
+
+.akun-text {
+  color: #fef9e1;
+  font-family: "Anton";
+  font-size: 64px;
+  font-weight: normal;
+  padding-left: 30px;
+}
+
+.akun .text {
+  background-color: #fef9e1;
+  width: 375px;
+  height: 53px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  display: block;
+  line-height: normal;
+}
+
+.akun .text::placeholder {
+  font-family: "Inria Sans";
+  font-size: 30px;
+  font-weight: normal;
+  color: #6d2323;
+  opacity: 1;
+}
+
+.cta {
+  background-color: #fef9e1;
+  width: 187px;
+  height: 47px;
+  border-radius: 50px;
+  margin-top: 52px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Inria Sans";
+  font-size: 30px;
+  font-weight: normal;
+  color: #6d2323;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.akun-desc {
+  font-family: "Inria Sans";
+  font-size: 24px;
+  font-weight: normal;
+  color: #fef9e1;
+  margin-top: 10;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+.akun-desc a:hover {
+  text-decoration: underline;
+}
+.signup-msg {
+  color: yellow;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+}

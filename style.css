@@ -1,0 +1,924 @@
+:root {
+  --inner-wrapper: 1280px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.body {
+  background-color: #fff;
+}
+
+/* landing page */
+.wrapper {
+  width: 100%;
+}
+
+.hero {
+  /* margin: 0; */
+  background: url("img/background.jpg");
+  background-size: cover;
+  width: 100%;
+  min-height: 676px;
+}
+
+.inner-wrapper {
+  max-width: var(--inner-wrapper);
+  margin: 0 auto;
+}
+
+.header-nav {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  width: 130px;
+  height: 94px;
+  padding-top: 20px;
+  margin-left: auto;
+}
+
+.search-results {
+  font-family: "Inria Sans";
+  position: absolute;
+  width: 95%;
+  margin-top: 50px;
+  background-color: #6d2323;
+  border-radius: 6px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  /* border-bottom: 1px solid #eee; */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: white;
+}
+
+.search-item img.product-thumb {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 12px;
+}
+
+.login {
+  background-color: #6d2323;
+  /* width: 200px; */
+  padding: 1px 30px;
+  height: 50px;
+  border-radius: 10px;
+  /* margin-top: 40px; */
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.login-item {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 30px;
+}
+
+.login-item a {
+  font-family: "Inria Sans";
+  font-size: 32px;
+  font-weight: normal;
+  color: #fef9e1;
+  text-decoration: none;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+.search-item .name {
+  font-weight: bold;
+}
+
+.search-item:hover {
+  color: #6d2323;
+  background-color: #f7f7f7;
+}
+
+.search-item .price {
+  /* color: #555; */
+  font-size: 14px;
+}
+
+/* Optional: style the placeholder text */
+.search-input::placeholder {
+  color: #888;
+}
+
+.search-container {
+  position: relative;
+  /* width: 400px; */
+  width: 100%;
+  /* margin: 0 auto; */
+  /* background-color: #6D2323; */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  /* width: 800px; */
+  height: 50px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.search .text {
+  background-color: #fff;
+  /* width: 800px; */
+  padding: 0px 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  /* margin-top: 10px; */
+}
+
+.search .text::placeholder {
+  font-family: "Inria Sans";
+  font-size: 24px;
+  font-weight: normal;
+  color: #6d2323;
+  opacity: 1;
+  padding-left: 20px;
+}
+
+.search a.search-icon {
+  font-size: 25px;
+  position: absolute;
+  right: 20px;
+  /* top: 5%; */
+  text-decoration: none;
+  cursor: pointer;
+  /* margin-top: 20px; */
+}
+
+.nav {
+  background-color: #6d2323;
+  margin-top: 58px;
+  width: 100%;
+  height: auto;
+  /* height: 110px; */
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* agar item bisa turun ke baris berikutnya di layar kecil */
+  gap: 30px; /* jarak antar item saat wrap */
+  font-family: "Inria Sans", sans-serif;
+  font-size: 32px;
+  font-weight: lighter;
+  padding: 35px 100px;
+  margin: 0 auto;
+}
+
+.nav-item a {
+  color: #fef9e1;
+  font-size: 32px;
+  text-decoration: none;
+  font-family: "Inria Sans";
+}
+
+.header-text {
+  font-family: "Inria Sans";
+  font-size: 48px;
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+  color: #fef9e1;
+  margin-top: 53px;
+  margin-bottom: 53px;
+  font-weight: bold;
+}
+
+.header-desc {
+  background-color: #6d2323;
+  /* width: 1100px; */
+  /* margin: 0 20px; */
+  padding: 5px 0px;
+  /* height: 150px; */
+  border-radius: 20px;
+  font-family: "Inria Sans";
+  font-size: 36px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  color: #fef9e1;
+  text-align: center;
+  font-weight: lighter;
+}
+
+/* kategori */
+
+.kategori {
+  background-color: #fef9e1;
+  width: 100%;
+  padding: 20px 0;
+  min-height: 800px;
+  /* gap: 10px; */
+}
+
+.kategori-text {
+  color: #6d2323;
+  font-family: "Inria Sans";
+  font-size: 90px;
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.kategori-container1 {
+  padding: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 120px;
+  float: left;
+  background-color: #e5d0ac;
+  /* width: 730px; */
+  /* width: 100%; */
+  /* height: 200px; */
+  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.kategori-frame {
+  background-color: #6d2323;
+  width: 210px;
+  height: 160px;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kategori-desc {
+  color: #e5d0ac;
+  font-family: "Inria Sans";
+  font-size: 24px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kategori-container2 {
+  float: right;
+  /* margin-top: 50px; */
+  padding: 40px;
+  flex-wrap: wrap;
+  background-color: #e5d0ac;
+  /* width: 730px; */
+  /* height: 200px; */
+  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* product */
+
+.product {
+  background-color: #6d2323;
+  width: 100%;
+  padding: 40px 0px;
+  /* height: 676px; */
+}
+
+.product-text {
+  color: #e5d0ac;
+  font-family: "Inria Sans";
+  font-size: 90px;
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+  margin-bottom: 50px;
+}
+
+.product-frame {
+  background-color: #fef9e1;
+  width: 265px;
+  height: 212px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.product-desc {
+  color: #6d2323;
+  font-family: "Inria Sans";
+  font-size: 36px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-container2 {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+}
+
+.brand {
+  background-color: #e5d0ac;
+  width: 100%;
+  min-height: 676px;
+}
+
+.brand-text {
+  color: #6d2323;
+  font-family: "Inria Sans";
+  font-size: 90px;
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.brand-container {
+  background-color: #fef9e1;
+  /* width: 1100px; */
+  width: 90%;
+  padding: 40px 0;
+  /* height: 400px; */
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 25px;
+}
+
+.brand-frame {
+  background-color: #e5d0ac;
+  width: 250px;
+  height: 290px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-desc {
+  color: #6d2323;
+  font-family: "Inria Sans";
+  font-size: 36px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.order {
+  background-color: #6d2323;
+  width: 100%;
+  padding: 45px 0;
+  /* height: 1024px; */
+}
+
+.order-text {
+  color: #fef9e1;
+  font-family: "Inria Sans";
+  font-size: 90px;
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.order-container1 {
+  /* width: 1056px; */
+  height: 305px;
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.order-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.order-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fef9e1;
+  font-family: "Inria Sans";
+  font-size: 90px;
+  font-weight: bold;
+}
+
+.order-container2 {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  margin-top: 150px;
+}
+
+.order-frame {
+  background-color: #fef9e1;
+  width: 255px;
+  height: 298px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.order-frame img {
+  display: block;
+  margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.order-desc {
+  color: #6d2323;
+  font-family: "Inria Sans";
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.order-price {
+  color: #6d2323;
+  font-family: "Inria Sans";
+  font-size: 20px;
+  font-weight: normal;
+  padding-top: 15px;
+}
+.order-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 200px;
+  font-size: 1em; /* Sesuaikan ukuran jika perlu */
+}
+
+.review {
+  padding: 40px 0;
+  background-color: #fef9e1;
+  width: 100%;
+  min-height: 676px;
+}
+
+.review-text {
+  color: #6d2323;
+  font-family: "Inria Sans";
+  font-size: 90px;
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  gap: 40px;
+}
+
+.review-frame {
+  background-color: #6d2323;
+  width: 330px;
+  height: 420px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-nama {
+  color: #fef9e1;
+  font-family: "Inria Sans";
+  font-size: 36px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.review-desc {
+  color: #fef9e1;
+  font-family: "Inria Sans";
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.cart {
+  background-color: #6d2323;
+  width: 100%;
+  height: 676px;
+  position: relative;
+}
+
+.cart-text {
+  color: #fef9e1;
+  font-family: "Inria Sans";
+  font-size: 90px;
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cart-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 50px;
+}
+
+.cart-container {
+  background-color: #fef9e1;
+  width: 900px;
+  height: 428px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.cart-frame {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+}
+
+.cart-desc {
+  color: #6d2323;
+  font-family: "Inria Sans";
+  font-size: 30px;
+  font-weight: normal;
+  display: block;
+  padding-top: 40px;
+  margin-bottom: 10px;
+  width: 600px;
+}
+
+.cart-price {
+  color: #6d2323;
+  font-family: "Inria Sans";
+  font-size: 30px;
+  font-weight: normal;
+  padding-top: 40px;
+  display: block;
+  margin-top: 0;
+  width: 200px;
+}
+
+.cta-tambah {
+  background-color: #e5d0ac;
+  width: 194px;
+  height: 45px;
+  border-radius: 50px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding-left: 20px;
+}
+
+.cart-qty {
+  color: #6d2323;
+  font-family: "Inria Sans";
+  font-size: 30px;
+  font-weight: normal;
+  padding-top: 4px;
+}
+
+.icon-delete {
+  padding-top: 40px;
+}
+
+.cta-container {
+  background-color: #fef9e1;
+  width: 250px;
+  height: 51px;
+  border-radius: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.cta-cart {
+  background-color: #fef9e1;
+  border: none;
+  font-family: "Inria Sans";
+  font-size: 32px;
+  font-weight: normal;
+  color: #6d2323;
+}
+
+.footer {
+  background-color: #e5d0ac;
+  width: 100%;
+  height: auto;
+}
+.footer-container {
+  font-family: "Inria Sans";
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-section1 {
+  text-align: center;
+}
+
+.footer-logo {
+  width: 130px;
+  height: 94px;
+  padding-top: 20px;
+  margin-left: auto;
+}
+
+.footer-desc {
+  font-family: "Inria Sans";
+  font-size: 24px;
+  font-weight: lighter;
+  color: #6d2323;
+}
+
+.footer-section2 {
+  text-align: center;
+}
+
+.footer-title {
+  font-family: "Inria Sans";
+  font-size: 36px;
+  font-weight: bold;
+  color: #6d2323;
+  padding-top: 20px;
+}
+
+.title-nav {
+  list-style: none;
+  font-family: "Inria Sans";
+  font-weight: lighter;
+  padding-top: 30px;
+}
+
+.title-nav a {
+  color: #6d2323;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-section3 {
+  text-align: start;
+}
+
+.footer-info {
+  font-family: "Inria Sans";
+  font-weight: lighter;
+  padding-top: 5px;
+  color: #6d2323;
+  font-size: 20px;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 5px;
+  border-top: 1px solid #6d2323;
+  font-size: 12px;
+  color: #6d2323;
+}
+
+.add-to-cart-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #6d2323;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.add-to-cart-btn:hover {
+  color: #3e1f1f;
+}
+
+.akun {
+  background-color: #6d2323;
+  width: 500px;
+  min-height: 486px;
+  border-radius: 15px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: visible;
+}
+.akun .akun-text {
+  color: #fef9e1;
+  font-family: "Anton";
+  font-size: 64px;
+  font-weight: normal;
+  padding-left: 30px;
+}
+.akun .text {
+  background-color: #fef9e1;
+  width: 375px;
+  height: 53px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  display: block;
+  line-height: normal;
+}
+.akun .text::placeholder {
+  font-family: "Inria Sans";
+  font-size: 30px;
+  font-weight: normal;
+  color: #6d2323;
+  opacity: 1;
+}
+.akun .cta {
+  background-color: #fef9e1;
+  width: 187px;
+  height: 47px;
+  border-radius: 50px;
+  margin-top: 52px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Inria Sans";
+  font-size: 30px;
+  font-weight: normal;
+  color: #6d2323;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.akun .akun-desc {
+  font-family: "Inria Sans";
+  font-size: 24px;
+  font-weight: normal;
+  color: #fef9e1;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+.akun .akun-desc a:hover {
+  text-decoration: underline;
+}
+.akun .signup-msg {
+  color: yellow;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* ======================================================= */
+/* MEDIA QUERY UNTUK LAYAR KECIL (MOBILE)                  */
+/* Blok ini harus berada di luar blok selector lainnya     */
+/* ======================================================= */
+@media only screen and (max-width: 600px) {
+  .header-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    display: none;
+  }
+
+  .header-text {
+    font-size: 34px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .header-desc {
+    font-size: 28px;
+    padding: 10px;
+    margin: 0 10px;
+  }
+
+  /* navigation */
+
+  .nav-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .nav-item a {
+    font-size: 30px;
+  }
+
+  /* kategori */
+
+  .kategori-text {
+    font-size: 60px;
+  }
+
+  .kategori-container1,
+  .kategori-container2 {
+    float: none;
+    justify-content: center;
+  }
+
+  /* order */
+
+  .order-title {
+    font-size: 3rem; /* Ukuran font yang lebih masuk akal */
+    text-align: center;
+    left: 0;
+    right: 0;
+  }
+
+  /* footer */
+  .footer-container {
+    justify-content: center;
+    padding: 20px 15px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-section3 {
+    text-align: center;
+  }
+
+  .search-results {
+    width: 80%;
+  }
+}
